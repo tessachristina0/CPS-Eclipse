@@ -1,9 +1,25 @@
 grammar gameoflife.GridDSL with org.eclipse.xtext.common.Terminals
 
-generate gridDSL "http://www.GridDSL.gameoflife"
+generate gridDSL "http://www.gameoflife/GridDSL"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+
+Grid: 'Grid:' name = ID
+	  'length:' length = INT
+	  'width:' width = INT
+	  ('percentage' percentage = INT)?
+		(cells += Cell)*
+;
+Cell: 'row:' row = INT
+	  'col:' col = INT
+	  'state:' state = State
+;
+enum State:
+	DEAD = 'dead' | 
+	ALIVE = 'alive'
+;
+
+enum Operator:
+	LT = '<' |
+	EQ = '=' |
+	GT = '>'
+;

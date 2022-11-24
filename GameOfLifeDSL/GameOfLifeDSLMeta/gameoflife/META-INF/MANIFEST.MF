@@ -26,5 +26,8 @@ Export-Package: gameoflife.gridDSL.util,
  gameoflife.generator,
  gameoflife.parser.antlr.internal,
  gameoflife.parser.antlr,
- gameoflife
+ gameoflife,
+ gameoflife.GridDSL,
+ gameoflife.GridDSL.impl,
+ gameoflife.GridDSL.util
 Import-Package: org.apache.log4j
