@@ -1,0 +1,9 @@
+grammar gameoflife.GridDSL with org.eclipse.xtext.common.Terminals
+
+generate gridDSL "http://www.GridDSL.gameoflife"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
