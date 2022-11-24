@@ -1,7 +1,9 @@
 package gameoflife.generator
 
-import gameoflife.GridDSL.Grid
-import gameoflife.GridDSL.State
+import gameoflife.gridDSL.Grid
+import gameoflife.gridDSL.State
+
+
 
 class CodeGenerator {
 	def static toCode(Grid root)'''
